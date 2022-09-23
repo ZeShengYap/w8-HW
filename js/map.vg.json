@@ -5,7 +5,7 @@
     "height": 400,
     "projection": {"type": "equalEarth"},
     "data": {
-      "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+      "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
       "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
     },
   
@@ -20,7 +20,7 @@
           "fields": ["total_cases"]
         }      
       },
-      {"calculate": "year(datum.date)", "as": "year"}
+      {"calculate": "datum.total_cases+1","as":"total_cases"}
     ],
     "mark": {"type": "geoshape"},
     "encoding": {
